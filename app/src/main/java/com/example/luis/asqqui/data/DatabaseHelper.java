@@ -10,9 +10,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DatabaseHelper extends SQLiteOpenHelper {
 
     // If you change the database schema, you must increment the database version.
-    private static final int DATABASE_VERSION = 2;
+    private static final int DATABASE_VERSION = 1;
 
-    static final String DATABASE_NAME = "weather.db";
+    static final String DATABASE_NAME = "asqqui.db";
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -23,10 +23,12 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
         final String SQL_CREATE_USER_TABLE = "CREATE TABLE " + DatabaseContract.UserEntry.TABLE_NAME  + " (" +
                 DatabaseContract.UserEntry._ID + " INTEGER PRIMARY KEY," +
-                DatabaseContract.UserEntry.COLUMN_NAME + " TEXT NOT NULL, " +
+                DatabaseContract.UserEntry.COLUMN_NAME + " TEXT, " +
                 DatabaseContract.UserEntry.COLUMN_EMAIL + " TEXT NOT NULL, " +
                 DatabaseContract.UserEntry.COLUMN_PASSWORD + " TEXT NOT NULL, " +
-                DatabaseContract.UserEntry.COLUMN_PHOTO + " BLOB NOT NULL" +
+                DatabaseContract.UserEntry.COLUMN_IDENTIFICATION_NUMBER + " TEXT, " +
+                DatabaseContract.UserEntry.COLUMN_BIRTH_DATE + " TEXT, " +
+                DatabaseContract.UserEntry.COLUMN_PHOTO + " BLOB" +
                 " );";
 
         final String SQL_CREATE_POLITICIAN_TABLE = "CREATE TABLE " + DatabaseContract.PoliticianEntry.TABLE_NAME + " (" +
@@ -37,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                 DatabaseContract.PoliticianEntry.COLUMN_PHOTO + " BLOB NOT NULL, " +
                 DatabaseContract.PoliticianEntry.COLUMN_PARTY + " INTEGER NOT NULL, " +
                 DatabaseContract.PoliticianEntry.COLUMN_VOTE_NUMBER + " INTEGER NOT NULL," +
-
+                DatabaseContract.PoliticianEntry.COLUMN_POSITION + " INTEGER NOT NULL," +
                 DatabaseContract.PoliticianEntry.COLUMN_DESCRIPTION + " TEXT NOT NULL, " +
                 DatabaseContract.PoliticianEntry.COLUMN_PROPOSALS + " TEXT NOT NULL " +
                 " );";
@@ -45,6 +47,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         final String SQL_CREATE_PARTY_TABLE = "CREATE TABLE " + DatabaseContract.PartyEntry.TABLE_NAME  + " (" +
                 DatabaseContract.PartyEntry._ID + " INTEGER PRIMARY KEY," +
                 DatabaseContract.PartyEntry.COLUMN_NAME + " TEXT UNIQUE NOT NULL, " +
+                DatabaseContract.PartyEntry.COLUMN_NAME_ABREVIATE + " TEXT UNIQUE NOT NULL, " +
                 DatabaseContract.PartyEntry.COLUMN_PHOTO + " BLOB NOT NULL, " +
                 DatabaseContract.PartyEntry.COLUMN_DESCRIPTION + " TEXT NOT NULL" +
                 " );";

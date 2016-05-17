@@ -1,4 +1,4 @@
-package com.example.Luis.myapplication.backend;
+package com.example.luis.myapplication.backend;
 
 /** The object model for the data we are sending through endpoints */
 public class MyBean {

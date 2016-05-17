@@ -3,7 +3,9 @@
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
+    <dimen name="card_elevation">16dp</dimen>
 
     <dimen name="text_headline_font_size">24sp</dimen>
     <dimen name="text_body_font_size">15sp</dimen>
+    <dimen name="floating_button_size">56dp</dimen>
 </resources>

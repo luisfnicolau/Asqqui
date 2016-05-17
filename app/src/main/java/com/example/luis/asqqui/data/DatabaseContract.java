@@ -65,6 +65,10 @@ public class DatabaseContract {
 
         public static final String COLUMN_PASSWORD = "password";
 
+        public static final String COLUMN_IDENTIFICATION_NUMBER = "identification_number";
+
+        public static final String COLUMN_BIRTH_DATE = "birth_date";
+
     }
 
     public static final class PoliticianEntry implements BaseColumns {
@@ -87,6 +91,7 @@ public class DatabaseContract {
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_PHOTO = "photo";
         public static final String COLUMN_PARTY = "party";
+        public static final String COLUMN_POSITION = "position"; // Cargo - Vereador, Prefeito, etc..
         public static final String COLUMN_VOTE_NUMBER = "vote_number";
         public static final String COLUMN_DESCRIPTION = "description";
         public static final String COLUMN_PROPOSALS = "proposals";
@@ -111,6 +116,7 @@ public class DatabaseContract {
         public static final String TABLE_NAME = "party";
 
         public static final String COLUMN_NAME = "name";
+        public static final String COLUMN_NAME_ABREVIATE = "name_abreviate";
         public static final String COLUMN_PHOTO = "photo";
         public static final String COLUMN_DESCRIPTION = "description";
     }
