@@ -1,9 +1,9 @@
 package com.example.luis.asqqui.custom_views;
 
-import android.content.Context;
-import android.graphics.Rect;
-import android.util.AttributeSet;
-import android.widget.ScrollView;
+        import android.content.Context;
+        import android.graphics.Rect;
+        import android.util.AttributeSet;
+        import android.widget.ScrollView;
 
 public class NonFocusingScrollView extends ScrollView {
 
